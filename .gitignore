@@ -1,0 +1,4 @@
+*.pyc
+*.log
+ce_md_crawler/log/logs/*
+

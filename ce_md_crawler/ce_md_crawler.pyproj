@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>89e1fa95-8692-4a66-bfab-066062a56525</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ce_md_crawler.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ce_md_crawler</Name>
+    <RootNamespace>ce_md_crawler</RootNamespace>
+    <InterpreterId>Global|VisualStudio|python-3.7.7.amd64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ce_basic\functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ce_basic\market_data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ce_db\db_sqls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ce_db\db_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ce_exchanges\bea.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ce_exchanges\cqea.py" />
+    <Compile Include="ce_exchanges\fjea.py" />
+    <Compile Include="ce_exchanges\gdea.py" />
+    <Compile Include="ce_exchanges\hbea.py" />
+    <Compile Include="ce_exchanges\shea.py" />
+    <Compile Include="ce_exchanges\szea.py" />
+    <Compile Include="ce_exchanges\tjea.py" />
+    <Compile Include="ce_md_crawler.py" />
+    <Compile Include="test_scrap.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ce_exchanges\" />
+    <Folder Include="ce_basic\" />
+    <Folder Include="ce_db\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|python-3.6.2" />
+    <InterpreterReference Include="Global|VisualStudio|python-3.7.7.amd64" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
